@@ -19,7 +19,7 @@ Creating of small, flexible and fast tool with simple understandable configurati
 
 == Downloads ==
 
- * [https://sourceforge.net/projects/phpivr/files/latest lastest version of phpivr]
+ * [http://code.google.com/p/phpivr/downloads/list phpivr downloads page]
  
 == Starting Points ==
 
