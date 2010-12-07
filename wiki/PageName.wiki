@@ -1,4 +1,4 @@
-#summary phpivr advantages.
+#summary phpivr advantages
 
 = Welcome to phpivr Wiki =
 
