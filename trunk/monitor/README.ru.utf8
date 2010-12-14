@@ -1,0 +1,72 @@
+ПОДДЕРЖКА
+
+	Григорий Майстренко
+	grygoriim@gmail.com
+	
+	http://sourceforge.net/projects/phpivr
+
+ОПИСАНИЕ
+
+	phpivr monitor - Online WEB монитор для phpivr 
+
+ЗАВИСИМОСТИ
+
+	Asterisk PBX	
+
+ИНСТАЛЛЯЦЯ
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!Внимание!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!
+	!!  ЕСЛИ В Asterisk dialplan (/etc/asterisk/extensions.conf) ВЫЗОВ AGI
+	!!  ПРИЛОЖЕНИЯ УКАЗАН БЕЗ ПАРАМЕТРОВ
+	!!  
+	!!  	exten => 7777,n,AGI(IVR)
+	!!
+	!!  ТО ЭТУ СТРОКУ НУЖНО ЗАМЕНИТЬ НА
+	!!
+	!!  	exten => 7777,n,AGI(IVR,common)
+	!!	
+	!!  В ПРОТИВНОМ СЛУЧАЕ МОНИТОР НЕ БУДЕТ ОПРЕДЕЛЯТЬ ЗВОНКИ НА IVR
+	!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	1. Скопируйте папку monitor в директорию с веб приложениями (/var/www)
+	2. Отредактируйте конфигурационный файл apache
+
+		Alias "/ivrmon/" "/var/www/monitor/"
+        	<Directory "/var/www/monitor/">
+			Options Indexes FollowSymLinks MultiViews
+			AllowOverride None
+			Order allow,deny
+			allow from all
+		</Directory>	
+
+	3. Перезпустите apache
+		
+		$ apache2ctl restart
+		
+	4. Добавте пользователя в asterisk manager (/etc/asterisk/manager.conf)
+		
+		[admin]
+		secret = mysecret
+		;deny=0.0.0.0/0.0.0.0
+		;permit=127.0.0.1/255.255.255.0
+		read = system,call,log,verbose,command,agent,user
+		write = system,call,log,verbose,command,agent,user
+		
+	5. Из консоли астериска
+	
+		$ asterisk -r
+		asterisk*CLI> manager reload
+
+	6. Отредактируйте файл с настройками ./lib/ivr-monitor.conf.php
+	
+	7. Звоним на IVR. Открываем http://monitor.phpivr.local.net/ivrmon/. Видим звонки.
+	Если звонки так и не появились - обращаемся за поддержкой.
+
+
+СОВМЕСТИМОСТЬ
+
+Без граблей проверено на Asterisk 1.4.хх, 1.6.x
+
+
