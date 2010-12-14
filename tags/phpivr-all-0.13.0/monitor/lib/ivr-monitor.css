@@ -1,0 +1,36 @@
+/*
+ *  ivr-monitor.css
+ *
+ *  Григорий Майстренко (Grygorii Maistrenko)
+ *  grygoriim@gmail.com
+ */
+
+
+body {
+	font-size: small;
+	font-family: sans-serif;
+}
+
+table { 
+	border: 1px gray solid;
+	border-collapse: collapse;
+	font-size: small;
+        font-family: sans-serif;
+}
+
+td { 
+	width: 100px;
+	border: 1px gray solid;
+	border-collapse: collapse;
+	/*font-size: small;
+	font-family: sans-serif;
+	*/
+}
+
+.th-calls {
+	font-size: small;
+	font-weight: bold;
+	text-align: center;
+}
+
+
