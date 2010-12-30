@@ -1,3 +1,4 @@
+#labels Featured
 = How to configure phpivr =
 
 Suppose that we need to do interactive voice responses, which briefly say in which company received a call and then redirect the call to the Sales department (1001) if you press 1, Corporate clients dep. (1002) by pressing 2. Well, as usual - to connect with the Secretary (1000) if you press 0 or wait while the message ends. Also we provide the case when from the terminal will introduce dtmf not covered by the menu – play message “to hear the menu again” then run it again.
