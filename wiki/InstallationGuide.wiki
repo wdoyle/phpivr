@@ -1,4 +1,5 @@
 #summary Installation guide of phpivr.
+#labels Featured
 
 = Installation guide =
 
