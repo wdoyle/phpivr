@@ -4,7 +4,7 @@
 
 1. Copy folder ivr into astagidir (/var/lib/asterisk/agi-bin/)
 {{{
-$ cp -rv ./ivr /var/lib/asterisk/agi-bin/`
+$ cp -rv ./ivr /var/lib/asterisk/agi-bin/
 }}}
 2. Create symlink on IVR.php
 {{{
