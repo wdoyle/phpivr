@@ -29,6 +29,5 @@ From here it should be noted that while playing a welcome message, pressing any 
 
 That's all the settings. Enjoy.
 
- == See Also ==
-
- * [Welcome Welcome]
+== See Also ==
+ * [HowToAuthorizeUserUsingPhpivr How to authorize user using phpivr]
