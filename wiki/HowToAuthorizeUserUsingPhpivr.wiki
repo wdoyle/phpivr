@@ -1,4 +1,5 @@
 #summary Here is example of “how to authorize user"
+#labels Featured
 
 = How to authorize user using phpivr =
 
