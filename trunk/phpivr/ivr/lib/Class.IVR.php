@@ -15,6 +15,7 @@
  * 
  */
 
+
 require_once (dirname(__FILE__)."/phpivr.conf.php");
 
 class IVR {
